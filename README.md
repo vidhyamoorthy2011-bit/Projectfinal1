@@ -50,25 +50,15 @@ Automation-Testing-GUVI
 Pages
 * guvi_page.py
 
-Tests
+**tests**
 
-   *test_url_launch.py
+* test_cases.py
 
-   *test_title.py 
 
-   *test_login.py
-
-   *test_menu.py
-
-   *test_chatbot.py
-
-   *test_logout.py
-
-**Reports**
 
 report.html
 
-requirements.txt
+requirement.txt
 
 README.md
 
@@ -158,17 +148,18 @@ pip install -r requirements.txt
 
 step 2: Run the test cases
 
-pytest -v
+pytest -v tests/
 
 Step 3: To Generate HTML test report
 
-pytest --html=report.html
+pytest --html=report.html --self-contained.html
 
 --------------------------------------------------------------
 **Test Execution Report:**
 
 The HTML report can be accessed using the following Google drive link:
 
+https://drive.google.com/file/d/1sFe9kEWVpvZkZC0wRRTo1WKU6MuKy84I/view?usp=drive_link
 
 -------------------------------------------------------------------------------
 
