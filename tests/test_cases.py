@@ -24,13 +24,15 @@ def setup():
 #Test case 1 - URL launch
 def test_url_launch(setup):
     driver, Page = setup
+    WebDriverWait(driver,10).until(lambda d: "guvi.in" in driver.current_url)
     assert "guvi.in" in driver.current_url
 
 #Test case 2 - verify page title
 def test_title(setup):
     driver, Page = setup
+    WebDriverWait(driver,10).until(lambda d: d.title != "")
     expected = "HCL GUVI | Learn to code in your native language"
-    assert driver.title == expected
+    assert driver.title.strip() == expected
 
 #Test case 3  - Login button visibility
 def test_login_button(setup):
